@@ -1,0 +1,16 @@
+service : {
+  addPerson: (text) -> (nat);
+  getBillSplit: () ->
+   (opt
+     record {
+       isValid: bool;
+       people: vec record {
+                     amount: float64;
+                     name: text;
+                   };
+       total: float64;
+     }) query;
+  removePerson: (nat) -> (bool);
+  setBillTotal: (float64) -> ();
+  updatePercentage: (nat, float64) -> (bool);
+}
